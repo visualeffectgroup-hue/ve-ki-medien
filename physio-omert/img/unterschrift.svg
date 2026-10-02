@@ -1,0 +1,11 @@
+<!-- PLATZHALTER – durch echte Unterschrift ersetzen (gleicher Dateiname, transparenter Hintergrund, SVG oder PNG) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 110" fill="none" stroke="#141414" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 34 C 48 22, 86 18, 112 24"/>
+  <path d="M66 26 C 62 50, 56 74, 48 92 C 45 98, 40 99, 38 94"/>
+  <path d="M112 66 C 100 52, 124 40, 130 56 C 135 70, 116 80, 110 70 C 106 62, 118 58, 130 62
+           C 136 56, 140 52, 142 66 C 144 54, 152 50, 154 66 C 156 54, 164 50, 166 68
+           C 170 62, 182 54, 178 64 C 174 72, 168 74, 180 74 C 188 74, 190 62, 194 60
+           C 198 58, 200 66, 206 70 C 214 72, 216 52, 220 34 C 222 56, 224 70, 236 70"/>
+  <path d="M208 48 L 234 46"/>
+  <path d="M30 100 C 110 92, 210 88, 302 74" stroke-width="1.6"/>
+</svg>

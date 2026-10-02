@@ -1,0 +1,103 @@
+
+<!-- KONTAKT (erscheint auf allen Seiten) -->
+<section class="section section--grey contact" id="kontakt" aria-labelledby="kontakt-titel">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Kontakt &amp; Termin</p>
+      <h2 id="kontakt-titel">Wir sind für Sie da.</h2>
+      <p>Am schnellsten erreichen Sie uns telefonisch. Für allgemeine Fragen nutzen Sie gern das Kontaktformular – wir melden uns zeitnah zurück.</p>
+    </div>
+
+    <div class="contact__grid">
+      <form class="form" action="kontakt.php" method="post" novalidate data-contact-form>
+        <div class="form__notice" role="note">
+          <strong>Bitte beachten:</strong> Tragen Sie hier keine Diagnosen, Befunde oder sonstigen detaillierten Gesundheitsdaten ein. Solche Informationen besprechen wir gern persönlich oder telefonisch.
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="f-name">Name <span aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100">
+          </div>
+          <div class="field">
+            <label for="f-email">E-Mail-Adresse <span aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="150">
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="f-tel">Telefonnummer <span class="field__opt">(optional)</span></label>
+            <input id="f-tel" name="telefon" type="tel" autocomplete="tel" maxlength="40">
+          </div>
+          <div class="field">
+            <label for="f-betreff">Anliegen <span aria-hidden="true">*</span></label>
+            <select id="f-betreff" name="betreff" required>
+              <option value="">Bitte wählen</option>
+              <option>Terminanfrage</option>
+              <option>Frage zu Physiotherapie</option>
+              <option>Frage zu Osteopathie</option>
+              <option>Rezept &amp; Kosten</option>
+              <option>Bewerbung / Karriere</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-nachricht">Nachricht <span aria-hidden="true">*</span></label>
+          <textarea id="f-nachricht" name="nachricht" rows="5" required maxlength="3000"></textarea>
+        </div>
+
+        <!-- Spam-Schutz: für Menschen unsichtbar -->
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">Website</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="ts" value="">
+
+        <div class="field field--check">
+          <input id="f-dsgvo" name="datenschutz" type="checkbox" value="ja" required>
+          <label for="f-dsgvo">Ich habe die <a href="https://physio-omert.de/datenschutzerklaerung/">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. <span aria-hidden="true">*</span></label>
+        </div>
+
+        <div class="form__footer">
+          <button type="submit" class="btn">Nachricht senden</button>
+          <p class="form__hint">* Pflichtfelder</p>
+        </div>
+        <div class="form__status" role="status" aria-live="polite" hidden></div>
+      </form>
+
+      <aside class="contact__aside">
+        <div class="contact__card">
+          <h3>Praxis Thomas Omert</h3>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__label">Adresse</span>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Mittelweg+6%2C+97638+Mellrichstadt+Frickenhausen" target="_blank" rel="noopener">Mittelweg 6<br>97638 Mellrichstadt-Frickenhausen</a>
+            </li>
+            <li>
+              <span class="contact__label">Telefon</span>
+              <a href="tel:+499773898389">09773 89 83 89</a>
+            </li>
+            <li>
+              <span class="contact__label">E-Mail</span>
+              <a href="mailto:physio-omert@t-online.de">physio-omert@t-online.de</a>
+            </li>
+          </ul>
+          <a class="btn btn--block" href="tel:+499773898389">Termin telefonisch vereinbaren</a>
+        </div>
+
+        <div class="map" data-map
+             data-src="https://maps.google.com/maps?q=Mittelweg%206%2C%2097638%20Mellrichstadt%20Frickenhausen&amp;z=15&amp;output=embed">
+          <div class="map__consent">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            <p><strong>Karte anzeigen</strong><br>Beim Laden der Karte werden Daten (u. a. Ihre IP-Adresse) an Google übertragen. Mehr dazu in unserer <a href="https://physio-omert.de/datenschutzerklaerung/">Datenschutzerklärung</a>.</p>
+            <button type="button" class="btn btn--small btn--dark" data-map-load>Karte laden</button>
+            <a class="map__alt" href="https://www.google.com/maps/search/?api=1&amp;query=Mittelweg+6%2C+97638+Mellrichstadt+Frickenhausen" target="_blank" rel="noopener">oder Route direkt in Google Maps öffnen</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
