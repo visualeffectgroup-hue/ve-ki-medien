@@ -5,13 +5,13 @@ Mehrseitige, statische Website (HTML/CSS/JS). Kein CMS, keine Datenbank, schnell
 | Seite | Datei |
 |---|---|
 | Startseite (inkl. „Unsere Praxis“) | `index.html` |
+| Team | `team.html` |
 | Physiotherapie | `physiotherapie.html` |
 | Osteopathie | `osteopathie.html` |
 | Karriere | `karriere.html` |
 | Kontakt & Anfahrt | `kontakt.html` |
 
 **Ansehen:** `index.html` doppelklicken. Für die Präsentation ohne gelbe Platzhalter-Markierungen: `index.html?clean`.
-Screenshots liegen in `screenshots/`.
 
 ---
 
@@ -43,6 +43,10 @@ Lädt ein Bild nicht, erscheint automatisch ein beschrifteter Platzhalter.
 
 Export: max. 2000 px Breite, WebP oder JPG ~80 %.
 
+### Teamfotos
+Als `img/team/vorname-nachname.jpg` (Hochformat 4:5) ablegen – z. B. `img/team/julia-omert.jpg`.
+Fehlt ein Foto, werden automatisch die Initialen angezeigt. Neue Person: Block `<article class="member">` in `_src/pages/team.html` kopieren.
+
 ### Logo & Unterschrift
 - Logo: als `img/logo.svg` ablegen → ersetzt automatisch die Textmarke im Header.
 - Unterschrift: `img/unterschrift.svg` ist ein **Platzhalter**. Echte Unterschrift auf weißem Papier mit schwarzem Stift,
@@ -52,6 +56,10 @@ Export: max. 2000 px Breite, WebP oder JPG ~80 %.
 `css/style.css` → `:root` (`--black`, `--red`, `--white`).
 
 ---
+
+## Effekte
+Parallax-Hintergrundbilder, Bilder die sich beim Scrollen hereinschieben, gestaffeltes Einblenden, Laufband und Ken-Burns-Zoom im Hero.
+Alles reines CSS/JS ohne Bibliotheken. Bei aktivierter Einstellung „Bewegung reduzieren“ im Betriebssystem werden die Effekte automatisch abgeschaltet.
 
 ## Technik & Datenschutz
 
@@ -68,6 +76,7 @@ Export: max. 2000 px Breite, WebP oder JPG ~80 %.
 - [ ] E-Mail: Website nennt `physio-omert@t-online.de`, Verzeichnisse teils `Thomas.omert@gmx.de`
 - [ ] Öffnungszeiten (aus Branchenverzeichnis: Mo–Do 8–20, Fr 8–14) bestätigen
 - [ ] Texte von der bestehenden Seite „Unsere Praxis“ übernehmen bzw. abgleichen
+- [ ] Team: Funktion von Susanne Menninger und Julia Wilde, Qualifikationen je Person
 - [ ] Gelb markierte Platzhalter: Berufsjahre, Kassen/Preise, Behandlungsdauer Osteopathie, Teamgröße
 - [ ] Vorteile auf der Karriereseite nur zutreffende stehen lassen
 - [ ] Datenschutzerklärung um Kontaktformular, Google-Maps-Einbindung und Bewerbungen ergänzen

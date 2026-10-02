@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://physio-omert.de/">
 <meta name="theme-color" content="#111111">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
 <!--
   BILDER: Alle Bilder mit data-replace="..." sind Stockbild-Platzhalter.
   Eigenes Foto in /img ablegen und src ändern (z. B. src="img/hero.jpg").
@@ -55,6 +56,7 @@
     <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="index.html">Startseite</a>
       <a href="index.html#praxis">Unsere Praxis</a>
+      <a href="team.html">Team</a>
       <a href="physiotherapie.html">Physiotherapie</a>
       <a href="osteopathie.html">Osteopathie</a>
       <a href="karriere.html">Karriere</a>
@@ -73,20 +75,25 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero__media">
+  <div class="hero__media" data-parallax="0.3">
     <img data-replace="Hero – Thomas bei der Behandlung, ruhiges Licht, Querformat"
-         src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1800&q=75"
+         src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=2000&q=75"
          alt="Physiotherapeutische Behandlung in der Praxis Thomas Omert" fetchpriority="high">
   </div>
   <div class="container hero__inner">
-    <p class="eyebrow eyebrow--light">Physiotherapie · Osteopathie · Naturheilkunde</p>
-    <h1>Wieder frei bewegen.<br><span class="accent">Mit Zeit für Sie.</span></h1>
-    <p class="hero__lead">Ihre Praxis in Frickenhausen bei Mellrichstadt. Wir suchen die Ursache Ihrer Beschwerden – und behandeln Sie als ganzen Menschen.</p>
-    <div class="btn-row">
-      <a href="kontakt.html" class="btn">Termin anfragen</a>
+    <p class="eyebrow eyebrow--light anim-in">Physiotherapie · Osteopathie · Naturheilkunde</p>
+    <h1 class="hero__title">
+      <span class="line"><span style="--d:.15s">Wieder frei</span></span>
+      <span class="line"><span style="--d:.3s">bewegen.</span></span>
+      <span class="line"><span class="accent" style="--d:.45s">Mit Zeit für Sie.</span></span>
+    </h1>
+    <p class="hero__lead anim-in" style="--d:.7s">Ihre Praxis in Frickenhausen bei Mellrichstadt. Wir suchen die Ursache Ihrer Beschwerden – und behandeln Sie als ganzen Menschen.</p>
+    <div class="btn-row anim-in" style="--d:.85s">
+      <a href="kontakt.html" class="btn btn--arrow">Termin anfragen</a>
       <a href="tel:+499773898389" class="btn btn--outline-light">09773 89 83 89</a>
     </div>
   </div>
+  <a href="#philosophie" class="hero__scroll" aria-label="Nach unten scrollen"><span></span></a>
 </section>
 
 <!-- FAKTEN -->
@@ -99,23 +106,45 @@
   </div>
 </section>
 
-<!-- PHILOSOPHIE -->
-<section class="section">
-  <div class="container intro">
-    <p class="eyebrow">Unsere Philosophie</p>
-    <h2 class="intro__title">Im Mittelpunkt stehen Ihre Gesundheit und Ihr Wohlbefinden. Unser Ansatz ist <span class="accent">ganzheitlich</span>.</h2>
-    <p class="intro__text">Schmerzen haben selten nur eine Ursache. Deshalb verbinden wir klassische Physiotherapie mit Osteopathie und Naturheilkunde – und nehmen uns die Zeit, genau hinzusehen.</p>
+<!-- LAUFBAND -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Physiotherapie</span><span>Osteopathie</span><span>Naturheilkunde</span><span>Manuelle Therapie</span><span>Lymphdrainage</span><span>Bobath</span><span>PNF</span><span>Kinesio-Taping</span>
+    <span>Physiotherapie</span><span>Osteopathie</span><span>Naturheilkunde</span><span>Manuelle Therapie</span><span>Lymphdrainage</span><span>Bobath</span><span>PNF</span><span>Kinesio-Taping</span>
+  </div>
+</div>
+
+<!-- PHILOSOPHIE mit Bild-Collage -->
+<section class="section" id="philosophie">
+  <div class="container philo">
+    <div class="philo__text">
+      <p class="eyebrow">Unsere Philosophie</p>
+      <h2 class="intro__title">Im Mittelpunkt stehen Ihre Gesundheit und Ihr Wohlbefinden. Unser Ansatz ist <span class="accent">ganzheitlich</span>.</h2>
+      <p class="intro__text">Schmerzen haben selten nur eine Ursache. Deshalb verbinden wir klassische Physiotherapie mit Osteopathie und Naturheilkunde – und nehmen uns die Zeit, genau hinzusehen.</p>
+      <a href="#praxis" class="link-arrow">Unsere Praxis kennenlernen</a>
+    </div>
+    <div class="philo__media">
+      <figure class="philo__img philo__img--a" data-reveal-img>
+        <img data-replace="Atmosphäre – Behandlungsraum mit Tageslicht, Hochformat"
+             src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=75"
+             alt="" loading="lazy">
+      </figure>
+      <figure class="philo__img philo__img--b" data-reveal-img data-parallax="0.08">
+        <img data-replace="Detail – Hände bei der Behandlung"
+             src="https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?auto=format&fit=crop&w=700&q=75"
+             alt="" loading="lazy">
+      </figure>
+      <div class="philo__badge" data-parallax="0.15"><strong>3</strong><span>Disziplinen.<br>Ein Ansatz.</span></div>
+    </div>
   </div>
 </section>
 
 <!-- BEHANDLUNGSMETHODEN -->
 <section class="section section--tight" aria-labelledby="leistungen-titel">
   <div class="container">
-    <div class="section__head section__head--row">
-      <div>
-        <p class="eyebrow">Behandlungsmethoden</p>
-        <h2 id="leistungen-titel">Was wir für Sie tun können</h2>
-      </div>
+    <div class="section__head">
+      <p class="eyebrow">Behandlungsmethoden</p>
+      <h2 id="leistungen-titel">Was wir für Sie tun können</h2>
     </div>
     <div class="teasers">
       <a class="teaser" href="physiotherapie.html">
@@ -149,10 +178,23 @@
   </div>
 </section>
 
+<!-- HINTERGRUNDBILD-BAND -->
+<section class="bg-band">
+  <div class="bg-band__img" data-parallax="0.2">
+    <img data-replace="Stimmungsbild – Praxisraum / Hände, ruhig, Querformat"
+         src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=70"
+         alt="" loading="lazy">
+  </div>
+  <div class="container bg-band__inner">
+    <p class="bg-band__statement">Ganzheitlichkeit ist <span class="accent">unsere Philosophie.</span></p>
+    <a href="kontakt.html" class="btn btn--outline-light btn--arrow">Termin vereinbaren</a>
+  </div>
+</section>
+
 <!-- UNSERE PRAXIS -->
 <section class="section section--grey" id="praxis" aria-labelledby="praxis-titel">
   <div class="container praxis">
-    <figure class="praxis__portrait">
+    <figure class="praxis__portrait img-frame" data-reveal-img>
       <img data-replace="Portrait Thomas Omert – in der Praxis, natürliches Licht, Hochformat"
            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=75"
            alt="Thomas Omert, Physiotherapeut, Osteopath und Heilpraktiker" loading="lazy">
@@ -173,18 +215,37 @@
       </div>
     </div>
   </div>
+
   <div class="container">
     <div class="gallery">
-      <img class="gallery__big" data-replace="Praxis – Behandlungsraum, Weitwinkel"
-           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=75"
-           alt="Behandlungsraum der Praxis" loading="lazy">
-      <img data-replace="Praxis – Empfang / Eingang"
-           src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=75"
-           alt="Empfangsbereich der Praxis" loading="lazy">
-      <img data-replace="Detail – Hände bei der Behandlung"
-           src="https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?auto=format&fit=crop&w=800&q=75"
-           alt="Detailaufnahme einer Behandlung" loading="lazy">
+      <figure class="gallery__big" data-reveal-img>
+        <img data-replace="Praxis – Behandlungsraum, Weitwinkel"
+             src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=75"
+             alt="Behandlungsraum der Praxis" loading="lazy">
+      </figure>
+      <figure data-reveal-img style="--d:.15s">
+        <img data-replace="Praxis – Empfang / Eingang"
+             src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=75"
+             alt="Empfangsbereich der Praxis" loading="lazy">
+      </figure>
+      <figure data-reveal-img style="--d:.3s">
+        <img data-replace="Detail – Hände bei der Behandlung"
+             src="https://images.unsplash.com/photo-1598901986949-f593ff2a31a6?auto=format&fit=crop&w=800&q=75"
+             alt="Detailaufnahme einer Behandlung" loading="lazy">
+      </figure>
     </div>
+
+    <!-- Team-Teaser -->
+    <a class="team-teaser" href="team.html">
+      <div class="avatars" aria-hidden="true">
+        <span>TO</span><span>JO</span><span>FE</span><span>LS</span><span>MS</span><span>SM</span><span>JW</span>
+      </div>
+      <div class="team-teaser__text">
+        <strong>Lernen Sie unser Team kennen</strong>
+        <span>Staatlich geprüfte Physiotherapeutinnen und Physiotherapeuten mit vielfältigen Zusatzqualifikationen.</span>
+      </div>
+      <span class="team-teaser__arrow" aria-hidden="true">→</span>
+    </a>
   </div>
 </section>
 
@@ -196,7 +257,7 @@
       <h2>Verstärken Sie unser Team.</h2>
       <p>Wir suchen Menschen, die mit Herz und Fachwissen arbeiten – Physiotherapeuten und weitere Kolleginnen und Kollegen.</p>
     </div>
-    <a href="karriere.html" class="btn">Offene Stellen ansehen</a>
+    <a href="karriere.html" class="btn btn--arrow">Offene Stellen ansehen</a>
   </div>
 </section>
 
@@ -339,6 +400,7 @@
         <h2 class="footer__title">Seiten</h2>
         <ul class="footer__links">
           <li><a href="index.html#praxis">Unsere Praxis</a></li>
+          <li><a href="team.html">Team</a></li>
           <li><a href="physiotherapie.html">Physiotherapie</a></li>
           <li><a href="osteopathie.html">Osteopathie</a></li>
           <li><a href="karriere.html">Karriere</a></li>

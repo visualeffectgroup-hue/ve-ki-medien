@@ -185,12 +185,59 @@
     });
   });
 
-  // Dezente Scroll-Animation
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const targets = $$('.section__head, .teaser, .services article, .pillars article, .benefits article, .icon-grid li, .steps li, .praxis > *, .job, .initiativ');
+  // Teamfotos: fehlt img/team/....jpg, werden die Initialen angezeigt
+  $$('img[data-initials]').forEach(img => {
+    const swap = () => {
+      const ph = document.createElement('div');
+      ph.className = 'member__initials';
+      ph.setAttribute('role', 'img');
+      ph.setAttribute('aria-label', img.alt);
+      ph.innerHTML = '<span></span><small>Foto folgt</small>';
+      ph.firstChild.textContent = img.dataset.initials;
+      img.replaceWith(ph);
+    };
+    if (img.complete && !img.naturalWidth) swap();
+    else img.addEventListener('error', swap);
+  });
+
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll-Animationen: Inhalte einblenden (gestaffelt) + Bilder "reinschieben"
+  if ('IntersectionObserver' in window && !reduced) {
+    const groups = '.teaser, .services article, .pillars article, .benefits article, .icon-grid li, .steps li, .member, .job, .pill-cloud li';
+    const targets = $$('.section__head, .praxis__text, .owner__text, .philo__text, .initiativ, .team-teaser, .bg-band__inner, ' + groups);
+    targets.forEach(t => {
+      if (t.matches(groups)) t.style.setProperty('--d', ([...t.parentElement.children].indexOf(t) % 4) * 0.09 + 's');
+    });
     const io = new IntersectionObserver(entries => entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-    }), { threshold: 0.1 });
+    }), { threshold: 0.12 });
     targets.forEach(t => { t.classList.add('reveal'); io.observe(t); });
+
+    const io2 = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-revealed'); io2.unobserve(e.target); }
+    }), { threshold: 0.2 });
+    $$('[data-reveal-img]').forEach(el => io2.observe(el));
+  } else {
+    $$('[data-reveal-img]').forEach(el => el.classList.add('is-revealed'));
+  }
+
+  // Parallax für Hintergrundbilder
+  const para = $$('[data-parallax]');
+  if (para.length && !reduced) {
+    let ticking = false;
+    const update = () => {
+      const vh = innerHeight;
+      para.forEach(el => {
+        const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > vh + 100) return;
+        const offset = (r.top + r.height / 2 - vh / 2) * -parseFloat(el.dataset.parallax);
+        el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+      });
+      ticking = false;
+    };
+    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    addEventListener('resize', update);
+    update();
   }
 })();

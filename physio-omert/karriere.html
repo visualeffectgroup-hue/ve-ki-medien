@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://physio-omert.de/karriere.html">
 <meta name="theme-color" content="#111111">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
 <!--
   BILDER: Alle Bilder mit data-replace="..." sind Stockbild-Platzhalter.
   Eigenes Foto in /img ablegen und src ändern (z. B. src="img/hero.jpg").
@@ -34,6 +35,7 @@
     <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="index.html">Startseite</a>
       <a href="index.html#praxis">Unsere Praxis</a>
+      <a href="team.html">Team</a>
       <a href="physiotherapie.html">Physiotherapie</a>
       <a href="osteopathie.html">Osteopathie</a>
       <a href="karriere.html" aria-current="page">Karriere</a>
@@ -54,14 +56,14 @@
   <div class="container page-hero__grid">
     <div>
       <nav class="breadcrumb" aria-label="Brotkrümelnavigation"><a href="index.html">Startseite</a><span aria-hidden="true">/</span><span aria-current="page">Karriere</span></nav>
-      <h1>Karriere</h1>
-      <p class="page-hero__lead">Arbeiten, wo Therapie noch Zeit hat. Wir suchen Verstärkung für unsere Praxis in Frickenhausen – fachlich stark, menschlich nah.</p>
-      <div class="btn-row">
+      <h1 class="anim-in">Karriere</h1>
+      <p class="page-hero__lead anim-in" style="--d:.15s">Arbeiten, wo Therapie noch Zeit hat. Wir suchen Verstärkung für unsere Praxis in Frickenhausen – fachlich stark, menschlich nah.</p>
+      <div class="btn-row anim-in" style="--d:.3s">
         <a href="#stellen" class="btn">Offene Stellen</a>
         <a href="#initiativ" class="btn btn--outline-light">Initiativ bewerben</a>
       </div>
     </div>
-    <figure class="page-hero__img">
+    <figure class="page-hero__img img-frame" data-reveal-img>
       <img data-replace="Team – Thomas mit Mitarbeiter/in im Gespräch, authentisch"
            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=75"
            alt="Team der Praxis bei der Arbeit" fetchpriority="high">
@@ -111,6 +113,17 @@
     <div class="jobs" id="jobs-list" aria-live="polite">
       <noscript><p>Unsere aktuellen Stellenangebote erhalten Sie auf Anfrage per E-Mail an <a href="mailto:physio-omert@t-online.de">physio-omert@t-online.de</a>.</p></noscript>
     </div>
+  </div>
+</section>
+
+<section class="bg-band bg-band--short">
+  <div class="bg-band__img" data-parallax="0.2">
+    <img data-replace="Stimmungsbild – Team bei der Arbeit, Querformat"
+         src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=2000&q=70"
+         alt="" loading="lazy">
+  </div>
+  <div class="container bg-band__inner">
+    <p class="bg-band__statement">Gute Therapie braucht <span class="accent">ein gutes Team.</span></p>
   </div>
 </section>
 
@@ -285,6 +298,7 @@
         <h2 class="footer__title">Seiten</h2>
         <ul class="footer__links">
           <li><a href="index.html#praxis">Unsere Praxis</a></li>
+          <li><a href="team.html">Team</a></li>
           <li><a href="physiotherapie.html">Physiotherapie</a></li>
           <li><a href="osteopathie.html">Osteopathie</a></li>
           <li><a href="karriere.html">Karriere</a></li>

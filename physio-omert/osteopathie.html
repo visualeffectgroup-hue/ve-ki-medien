@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://physio-omert.de/osteopathie.html">
 <meta name="theme-color" content="#111111">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add("js")</script>
 <!--
   BILDER: Alle Bilder mit data-replace="..." sind Stockbild-Platzhalter.
   Eigenes Foto in /img ablegen und src ändern (z. B. src="img/hero.jpg").
@@ -34,6 +35,7 @@
     <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="index.html">Startseite</a>
       <a href="index.html#praxis">Unsere Praxis</a>
+      <a href="team.html">Team</a>
       <a href="physiotherapie.html">Physiotherapie</a>
       <a href="osteopathie.html" aria-current="page">Osteopathie</a>
       <a href="karriere.html">Karriere</a>
@@ -54,14 +56,14 @@
   <div class="container page-hero__grid">
     <div>
       <nav class="breadcrumb" aria-label="Brotkrümelnavigation"><a href="index.html">Startseite</a><span aria-hidden="true">/</span><span aria-current="page">Osteopathie</span></nav>
-      <h1>Osteopathie</h1>
-      <p class="page-hero__lead">Eine ganzheitliche, manuelle Behandlungsform: Mit den Händen untersuchen und behandeln wir Zusammenhänge im Körper – nicht nur die Stelle, an der es schmerzt.</p>
-      <div class="btn-row">
+      <h1 class="anim-in">Osteopathie</h1>
+      <p class="page-hero__lead anim-in" style="--d:.15s">Eine ganzheitliche, manuelle Behandlungsform: Mit den Händen untersuchen und behandeln wir Zusammenhänge im Körper – nicht nur die Stelle, an der es schmerzt.</p>
+      <div class="btn-row anim-in" style="--d:.3s">
         <a href="kontakt.html" class="btn">Termin anfragen</a>
         <a href="#leistungen" class="btn btn--outline-light">Unser Angebot</a>
       </div>
     </div>
-    <figure class="page-hero__img">
+    <figure class="page-hero__img img-frame" data-reveal-img>
       <img data-replace="Osteopathie – Hände am Kopf / Nacken, ruhige Stimmung"
            src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=75"
            alt="Osteopathische Behandlung" fetchpriority="high">
@@ -134,6 +136,17 @@
       <li>Beschwerden, deren Ursache bislang unklar geblieben ist</li>
       <li>Begleitend bei funktionellen Verdauungsbeschwerden</li>
     </ul>
+  </div>
+</section>
+
+<section class="bg-band bg-band--short">
+  <div class="bg-band__img" data-parallax="0.2">
+    <img data-replace="Stimmungsbild – Hände / Ruhe, Querformat"
+         src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=2000&q=70"
+         alt="" loading="lazy">
+  </div>
+  <div class="container bg-band__inner">
+    <p class="bg-band__statement">Der Körper ist <span class="accent">eine Einheit.</span></p>
   </div>
 </section>
 
@@ -323,6 +336,7 @@
         <h2 class="footer__title">Seiten</h2>
         <ul class="footer__links">
           <li><a href="index.html#praxis">Unsere Praxis</a></li>
+          <li><a href="team.html">Team</a></li>
           <li><a href="physiotherapie.html">Physiotherapie</a></li>
           <li><a href="osteopathie.html">Osteopathie</a></li>
           <li><a href="karriere.html">Karriere</a></li>
